@@ -19,4 +19,4 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
         
       - name: Push Docker Image
-        run: docker push ./Dockerfile
+        run: docker push ghcr.io/xhuve/action_docker:latest
