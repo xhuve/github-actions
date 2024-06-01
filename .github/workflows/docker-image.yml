@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
   
-      - run: docker build -t action_docker -f . /github_actions/
+      - run: docker build -t action_docker -f /github_actions/
   
       - uses: docker/login-action@v3
         with:
