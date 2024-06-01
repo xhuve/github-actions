@@ -18,10 +18,5 @@ jobs:
           username: xhuve
           password: ${{ secrets.GITHUB_TOKEN }}
         
-      - name: Build and Push Docker Image
-        uses: docker/build-push-action@v5
-        with:
-          context: .
-          file: ./Dockerfile
-          push: true
-          tags: ghcr.io/xhuve/action_docker:latest
+      - name: Push Docker Image
+        run: docker push ghcr.io/xhuve/holbertonschool_higher_level_programming:latest
