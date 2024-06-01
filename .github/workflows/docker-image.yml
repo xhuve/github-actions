@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v3
   
       - run: docker build -t action_docker .
   
@@ -21,7 +21,7 @@ jobs:
       - name: Build and Push Docker Image
         uses: docker/build-push-action@v5
         with:
-          context: ../..
-          file: ../../Dockerfile
+          context: .
+          file: ./Dockerfile
           push: true
           tags: ghcr.io/xhuve/action_docker:latest
