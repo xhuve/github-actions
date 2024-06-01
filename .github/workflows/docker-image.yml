@@ -20,6 +20,6 @@ on:
         password: ${{ secrets.GITHUB_TOKEN }}
       
       uses: docker/build-push-action@v5
-        context: .
-        file: ../../github-actions/Dockerfile
+        context: ../..
+        file: ../../Dockerfile
         push: true
