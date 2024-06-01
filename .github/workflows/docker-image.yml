@@ -21,6 +21,6 @@ on:
             password: ${{ secrets.GITHUB_TOKEN }}
         
         - uses: docker/build-push-action@v5
-            context: ../..
-            file: ../../Dockerfile
-            push: true
+          context: ../..
+          file: ../../Dockerfile
+          push: true
